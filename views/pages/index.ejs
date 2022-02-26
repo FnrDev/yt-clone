@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../layout/head %> 
+<body>
+    <% data.items.forEach(video => { %>
+        <div class="content-area">
+            <div class="videos-line">
+                <div class="videos">
+                    <div class="thumb">
+                        <div class="thum-img">
+                            <a href="https://www.youtube.com/watch?v=<%= video.id %>">
+                        <img src="<%= video.snippet.thumbnails.medium.url %>" alt="video image"></div>
+                        </a>
+                    </div>
+                    <div class="videos-info">
+                        <div class="alin-text-img">
+                            <div class="channel-pic">
+                                <a href=""><img src="https://yt3.ggpht.com/ytc/AKedOLQY_CpU6ru_ShO4SnVnytM3EgjIDJ3dOIGa-yen=s68-c-k-c0x00ffffff-no-rj"></a>
+                            </div>
+                            <div class="info-text">
+                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="title"><%= video.snippet.title %> </a>
+                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="channel-name"><%= video.snippet.channelTitle %> </a>
+                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="time-views"><%=  video.statistics.viewCount.toLocaleString() %> - <%= new Date(video.snippet.publishedAt).toLocaleString() %>  </a>        
+                            </div>
+                        </div>
+                        <br><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% }) %>  
+</body>
+</html>
