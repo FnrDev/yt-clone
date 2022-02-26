@@ -15,12 +15,14 @@
                     <div class="videos-info">
                         <div class="alin-text-img">
                             <div class="channel-pic">
-                                <a href=""><img src="https://yt3.ggpht.com/ytc/AKedOLQY_CpU6ru_ShO4SnVnytM3EgjIDJ3dOIGa-yen=s68-c-k-c0x00ffffff-no-rj"></a>
+                                <a href="">
+                                    <img src="https://yt3.ggpht.com/ytc/AKedOLQY_CpU6ru_ShO4SnVnytM3EgjIDJ3dOIGa-yen=s68-c-k-c0x00ffffff-no-rj">
+                                </a>
                             </div>
                             <div class="info-text">
                                 <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="title"><%= video.snippet.title %> </a>
                                 <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="channel-name"><%= video.snippet.channelTitle %> </a>
-                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="time-views"><%=  video.statistics.viewCount.toLocaleString() %> - <%= new Date(video.snippet.publishedAt).toLocaleString() %>  </a>        
+                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="time-views"><%= converter(video.statistics.viewCount) %> - <%= humanizeDuration(new Date(video.snippet.publishedAt).getTime() - Date.now(), { largest: 1 }) %>  </a>        
                             </div>
                         </div>
                     </div>
