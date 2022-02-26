@@ -11,3 +11,9 @@ Video Page Data:
 - Video description [ ]
 - Video like count [ ]
 - Video uploaded at [ ]
+
+🖥 Used Technology
+- Axios [ ✅ ]
+- Express [ ✅ ]
+- Youtube API [ ✅ ]
+- EJS [ ✅ ]
