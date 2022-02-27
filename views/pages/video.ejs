@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../layout/head %> 
+<body>
+    <iframe class="video" width="560" height="315" src="https://youtube.com/embed/<%= id %>" title="YouTube Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="published">
+        <p><b>Published:</b> <%= new Date(data.publishedAt).toLocaleString() %></p>
+        <p class="video-description"><b>Description:</b><%= data.description %> </p>
+    </div>
+</body>
+</html>

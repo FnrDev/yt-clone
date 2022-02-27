@@ -8,7 +8,7 @@
                 <div class="videos">
                     <div class="thumb">
                         <div class="thum-img">
-                            <a href="https://www.youtube.com/watch?v=<%= video.id %>">
+                            <a href="/video/<%= video.id %>"">
                         <img src="<%= video.snippet.thumbnails.medium.url %>" alt="video image"></div>
                         </a>
                     </div>
@@ -20,9 +20,9 @@
                                 </a>
                             </div>
                             <div class="info-text">
-                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="title"><%= video.snippet.title %> </a>
-                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="channel-name"><%= video.snippet.channelTitle %> </a>
-                                <a href="https://www.youtube.com/watch?v=<%= video.id %>" class="time-views"><%= converter(video.statistics.viewCount) %> - <%= humanizeDuration(new Date(video.snippet.publishedAt).getTime() - Date.now(), { largest: 1 }) %>  </a>        
+                                <a href="/video/<%= video.id %>" class="title"><%= video.snippet.title %> </a>
+                                <a href="/video/<%= video.id %>"" class="channel-name"><%= video.snippet.channelTitle %> </a>
+                                <a href="/video/<%= video.id %>"" class="time-views"><%= converter(video.statistics.viewCount) %> - <%= humanizeDuration(new Date(video.snippet.publishedAt).getTime() - Date.now(), { largest: 1 }) %>  </a>        
                             </div>
                         </div>
                     </div>

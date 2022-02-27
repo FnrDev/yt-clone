@@ -11,5 +11,6 @@ app.use(express.urlencoded({ extended: false }));
 
 // router
 app.use('/', require('./routers/index'));
+app.use('/video', require('./routers/video'));
 
 app.listen(process.env.PORT, () => console.log(`App is ready on port ${process.env.PORT}`));
